@@ -12,7 +12,7 @@
     <name>Spring Petclinic :: Spring MVC REST server</name>
 
     <properties>
-        <docker.image.prefix>arey</docker.image.prefix>
+        <docker.image.prefix>racerm3</docker.image.prefix>
     </properties>
 
     <dependencies>
