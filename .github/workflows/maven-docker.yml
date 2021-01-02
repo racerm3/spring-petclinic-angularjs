@@ -49,4 +49,4 @@ jobs:
         file: ./spring-petclinic-server/src/main/docker/Dockerfile
         platforms: linux/amd64,linux/arm64,linux/386
         push: true
-        tags: racerm3/spring-petclinic:latest
+        tags: racerm3/springboot-petclinic:latest
