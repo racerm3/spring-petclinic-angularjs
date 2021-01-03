@@ -1,7 +1,13 @@
-# AngularJS and Spring Boot version of the Spring PetClinic Sample Application [![Build Status](https://travis-ci.org/spring-petclinic/spring-petclinic-angularjs.svg?branch=master)](https://travis-ci.org/spring-petclinic/spring-petclinic-angularjs/)
+# AngularJS and Spring Boot version of the Spring PetClinic Sample Application
+
+![Java CI with Maven](https://github.com/racerm3/spring-petclinic-angularjs/workflows/Java%20CI%20with%20Maven/badge.svg?branch=master)
+
+***
 
 ## Understanding the Spring Petclinic application with a few diagrams
 [See the presentation here](http://fr.slideshare.net/AntoineRey/spring-framework-petclinic-sample-application)
+
+***
 
 ## Running petclinic locally
 ```
@@ -16,8 +22,7 @@ You can then access petclinic here: http://localhost:8080/
 
 <img width="782" alt="spring-petclinic" src="https://cloud.githubusercontent.com/assets/838318/19653851/61c1986a-9a16-11e6-8b94-03fd7f775bb3.png">
 
-## In case you find a bug/suggested improvement for Spring Petclinic
-Our issue tracker is available here: https://github.com/spring-petclinic/spring-petclinic-angularjs/issues
+***
 
 ## Database configuration
 
@@ -46,6 +51,7 @@ You may also start a MySql database with docker:
 docker run --name mysql-petclinic -e MYSQL_ROOT_PASSWORD=petclinic -e MYSQL_DATABASE=petclinic -p 3306:3306 mysql:5.7
 ```
 
+***
 
 ## Docker
 
@@ -85,7 +91,29 @@ mvn clean package docker:build
 To publish a new image into Docker Hub:
 ```
 mvn clean package docker:build -DpushImageTag
+or
+mvn docker:push
 ```
+
+***
+
+## Kubernetes
+
+### Run an image using Kubernetes
+
+To run a Docker image of Petclinic in Kubernetes
+
+```
+kubectl apply -f k8s/petclinic.yaml
+```
+
+To stop a Docker image of Petclinic in Kubernetes
+
+```
+kubectl delete -f k8s/petclinic.yaml
+```
+
+***
 
 ## Working with Petclinic in Eclipse/STS
 
@@ -164,3 +192,5 @@ The [issue tracker](https://github.com/spring-petclinic/spring-petclinic-angular
 
 For pull requests, editor preferences are available in the [editor config](https://github.com/spring-projects/spring-petclinic/blob/master/.editorconfig) for easy use in common text editors. Read more and download plugins at <http://editorconfig.org>.
 
+# Issue Tracker
+Our issue tracker is available here: https://github.com/spring-petclinic/spring-petclinic-angularjs/issues
