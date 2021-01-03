@@ -47,6 +47,6 @@ jobs:
       with:
         context: ./spring-petclinic-server/target
         file: ./spring-petclinic-server/src/main/docker/Dockerfile
-        platforms: linux/amd64,linux/arm64,linux/386
+        platforms: linux/amd64
         push: true
         tags: racerm3/springboot-petclinic:latest
